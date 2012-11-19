@@ -85,9 +85,26 @@
 		display: block;
 	}
 
-	.slide{
+	.hero{
 		margin: auto;
-		width: 1024px
+		width: 1024px;
+		position: relative;
+		text-align: left;
+		background: #fff;
+	}
+
+	.hero img{
+		width: 100%;
+	}
+
+	.quote{
+		position: absolute;
+		bottom: 40px;
+		left: 42px;
+		width: 380px;
+	}
+	.quote h2{
+		font-size: 32px;
 	}
 
 	/**
@@ -116,12 +133,17 @@
 
 	/* Smaller than standard 960 (devices and browsers) */
 	@media only screen and (max-width: 1025px) {
-		.intro img{
+		.hero{
 			width: 100%;
 		}
 		.slide{
 			width: 100%;
 		}
+		.quote{
+			padding: 10px;
+			left: 0px;
+			bottom: 0px;
+		}		
 	}
 
 	/* Tablet Portrait size to standard 960 (devices and browsers) */
@@ -131,8 +153,17 @@
 		}
 	}
 
+	@media only screen and (min-width: 767px){
+		#toggle{
+			display: block!important;
+		}
+	}
+
 	/* All Mobile Sizes (devices and browser) */
 	@media only screen and (max-width: 767px) {
+		header h1{
+			font-size: 26px;
+		}
 		header menu{
 			position: relative;
 		}
@@ -145,6 +176,10 @@
 		}
 		header menu .trigger{
 			display: block;
+		}
+		.quote{
+			position: static;
+			width: auto;
 		} 
 	}
 
