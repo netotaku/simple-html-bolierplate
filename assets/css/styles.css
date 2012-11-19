@@ -1,7 +1,22 @@
 	
+	*{
+		padding: 0px;
+		margin: 0px;
+	}
+
 	.clear{
 		clear: both;
-	}	
+	}
+
+	body{
+		text-align: center;
+	}
+
+	.wrapper{
+		margin: auto;
+		text-align: left;
+		width: 960px;
+	}		
 
 	/* #Media Queries
 	================================================== */
