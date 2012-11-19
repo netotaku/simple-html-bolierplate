@@ -4,6 +4,12 @@
 		margin: 0px;
 	}
 
+	.box{
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;         /* Opera/IE 8+ */
+	}
+
 	html{
 		background: #333;
 		color: #333;
@@ -23,13 +29,18 @@
 		text-align: left;
 		width: 960px;
 		padding: 10px;
-		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-		box-sizing: border-box;         /* Opera/IE 8+ */
 	}		
 
+	/**
+		Header
+	*******/
+
 	header{
-		background: #eee;
+		background: rgba(238,238,238,0.9);
+		position: fixed;
+		top: 0px;
+		width: 100%;
+		z-index: 1;
 	}
 
 	header h1{
@@ -44,14 +55,48 @@
 
 	header menu ul li{
 		float: left;
-		margin-left: 10px;
+		margin-right: 10px;
 	}
 
 	header menu ul li a{
 		display: block;
 		padding: 10px;
 		background: #ccc;
+	}
+
+	header menu .trigger{
+		background: #ccc;
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		top: -30px;
+		right: 0px;
+		text-align: center;
+		padding-top: 6px;
+		display: none;
+		cursor: pointer;
 	}	
+
+	/**
+		Intro
+	*******/
+
+	.intro img{
+		display: block;
+	}
+
+	.slide{
+		margin: auto;
+		width: 1024px
+	}
+
+	/**
+		Article
+	*******/
+
+	article .section{
+		min-height: 350px;
+	}
 
 	article{
 		background: #fff;
@@ -70,13 +115,38 @@
 	================================================== */
 
 	/* Smaller than standard 960 (devices and browsers) */
-	@media only screen and (max-width: 1025px) {}
+	@media only screen and (max-width: 1025px) {
+		.intro img{
+			width: 100%;
+		}
+		.slide{
+			width: 100%;
+		}
+	}
 
 	/* Tablet Portrait size to standard 960 (devices and browsers) */
-	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+	@media only screen and (max-width: 959px) {
+		.section{
+			width: 100%!important;
+		}
+	}
 
 	/* All Mobile Sizes (devices and browser) */
-	@media only screen and (max-width: 767px) {}
+	@media only screen and (max-width: 767px) {
+		header menu{
+			position: relative;
+		}
+		header menu ul{
+			display: none;
+		}
+		header menu ul li{
+			float: none;
+			margin: 0px;
+		}
+		header menu .trigger{
+			display: block;
+		} 
+	}
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 	@media only screen and (min-width: 480px) and (max-width: 767px) {}
