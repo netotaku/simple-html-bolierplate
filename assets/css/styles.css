@@ -18,6 +18,7 @@
 	}
 
 	.section{
+		position: relative;
 		margin: auto;
 		text-align: left;
 		width: 960px;
@@ -34,6 +35,23 @@
 	header h1{
 		font-size: 32px;
 	}
+
+	header menu{
+		position: absolute;
+		right: 0px;
+		top: 0px;
+	}
+
+	header menu ul li{
+		float: left;
+		margin-left: 10px;
+	}
+
+	header menu ul li a{
+		display: block;
+		padding: 10px;
+		background: #ccc;
+	}	
 
 	article{
 		background: #fff;
